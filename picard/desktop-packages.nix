@@ -22,7 +22,6 @@
     i3lock-fancy-rapid
     imlib2
     jetbrains-mono
-    kate
     lolcat
     lxappearance
     mako
@@ -45,7 +44,7 @@
     wofi
     xfce.thunar
     xfce.thunar-archive-plugin
-    xfce.xfce4-terminal
+    file-roller
     xorg.libX11.dev
     xorg.libXft
     xorg.libXinerama
