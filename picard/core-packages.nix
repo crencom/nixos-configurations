@@ -11,33 +11,23 @@
     #ckb-next
     #google-chrome
     #wpsoffice
-    alacritty
     arandr
     arc-theme
     avahi
-    baobab
     bash-completion
     bat
     bibata-cursors
     blueberry
     btop
-    chromium
     curl
     dex
-    discord
     dmenu
-    dropbox
     duf
     edid-decode
-    etcher
-    evince
     feh
-    filezilla
     firefox
-    flameshot
     font-manager
     fsearch
-    gimp
     git
     gnome.dconf-editor
     gnome.gnome-disk-utility
@@ -47,13 +37,11 @@
     hw-probe
     hwinfo
     i3lock-fancy
-    inkscape
     insync
     inxi
     killall
     kitty
     lm_sensors
-    lollypop
     lshw
     meld
     most
@@ -61,31 +49,18 @@
     networkmanagerapplet
     nixos-generators
     nomacs
-    numlockx
-    obs-studio
-    ookla-speedtest
-    qbittorrent-qt5
     platinum-searcher
     polybar
     qt6Packages.qtstyleplugin-kvantum
     ripgrep
     rxvt-unicode
-    scrot
-    simplescreenrecorder
-    spotify
-    sublime4
-    telegram-desktop
     tree
     variety
-    vivaldi
-    vivaldi-ffmpeg-codecs
-    vlc
     volumeicon
-    vscode
+    micro
     wget
     widevine-cdm
     xorg.xkill
-    yakuake
     zsh
     zsh-completions
     zsh-syntax-highlighting
