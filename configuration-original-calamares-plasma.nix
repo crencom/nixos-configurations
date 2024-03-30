@@ -25,7 +25,7 @@
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = "Europe/Brussels";
+  time.timeZone = "America/Chicago";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -39,15 +39,15 @@
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "be";
+    layout = "us";
     xkbVariant = "";
   };
 
   # Configure console keymap
-  console.keyMap = "be-latin1";
+  console.keyMap = "us";
 
   # Enable CUPS to print documents.
-  services.printing.enable = true;
+  # services.printing.enable = false;
 
   # Enable sound with pipewire.
   sound.enable = true;
@@ -70,20 +70,19 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.erik = {
+  users.users.admin = {
     isNormalUser = true;
-    description = "erik";
+    description = "admin";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox
-      kate
     #  thunderbird
     ];
   };
 
   # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "erik";
+  services.xserver.displayManager.autoLogin.user = "admin";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
