@@ -52,10 +52,11 @@
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = "Europe/Brussels";
+  time.timeZone = "America/Chicago";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
+  
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -65,8 +66,8 @@
   #services.xserver.displayManager.startx.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
+  services.xserver.displayManager.lightdm.enable = true;
+  services.xserver.desktopManager.xfce.enable = true;
   # for wayland dark theme  
   #programs.dconf.enable = true;
 
@@ -95,21 +96,13 @@
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "be";
+    layout = "us";
     xkbVariant = "";
   };
 
-  # Select internationalisation properties.
-  console = {
-    keyMap = "be-latin1";
-    packages=[ pkgs.terminus_font ];
-    font="${pkgs.terminus_font}/share/consolefonts/ter-i22b.psf.gz";
-    #useXkbConfig = true; # use xkbOptions in tty.
-  };
-
   # Enable CUPS to print documents.
-  services.printing.enable = true;
-  services.printing.drivers = [pkgs.cnijfilter2];
+  # services.printing.enable = true;
+  # services.printing.drivers = [pkgs.cnijfilter2];
 
   # Enable sound with pipewire.
   sound.enable = true;
@@ -132,18 +125,18 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.erik = {
+  users.users.admin = {
     isNormalUser = true;
-    description = "erik";
-    extraGroups = [ "mlocate" "networkmanager" "wheel" "samba" "vboxusers" ];
+    description = "admin";
+    extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox
     ];
   };
 
   # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "erik";
+  services.xserver.displayManager.autoLogin.enable = false;
+  # services.xserver.displayManager.autoLogin.user = "admin";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -206,12 +199,6 @@
     ${pkgs.xorg.xrandr}/bin/xrandr --output Virtual1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
   '';
 
-  # Dbus
-  #services.dbus.enable = true;
-
-  # for wayland dark theme  
-  #programs.dconf.enable = true;
-
   security.polkit.enable = true;
   systemd = {
     user.services.polkit-gnome-authentication-agent-1 = {
@@ -229,9 +216,6 @@
     };
   };
 
-  # Gvfs
-  services.gvfs.enable = true;
-
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
@@ -239,7 +223,7 @@
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
-  networking.firewall.enable = false;
+  # networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
@@ -249,7 +233,4 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
 
- nixpkgs.config.permittedInsecurePackages = [
-	"openssl-1.1.1w" "electron-19.1.9"
-];
 }
