@@ -29,9 +29,9 @@ echo "--------------------------------------------------------------------------
 echo "this is project https://github.com/erikdubois/"$project
 echo "-----------------------------------------------------------------------------"
 git config --global pull.rebase false
-git config --global user.name "Erik Dubois"
-git config --global user.email "erik.dubois@gmail.com"
-sudo git config --system core.editor nano
+git config --global user.name "crencom"
+git config --global user.email "crencom@protonmail.com"
+sudo git config --system core.editor micro
 #git config --global credential.helper cache
 #git config --global credential.helper 'cache --timeout=32000'
 git config --global push.default simple
