@@ -9,9 +9,7 @@
 {
   environment.systemPackages = with pkgs; [
     #obs-studio-plugins.wlrobs
-    arc-kde-theme
     btop
-    cava
     cmatrix
     dash
     eww
@@ -24,8 +22,6 @@
     jetbrains-mono
     lolcat
     lxappearance
-    mako
-    materia-kde-theme
     micro
     nitrogen
     ocs-url
@@ -36,7 +32,6 @@
     rofi
     slstatus
     st
-    sddm-kcm
     swaybg
     sxhkd
     waybar
@@ -48,6 +43,5 @@
     xorg.libX11.dev
     xorg.libXft
     xorg.libXinerama
-    yad
-];
+  ];
 }
