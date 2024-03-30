@@ -6,7 +6,7 @@
 
 {
   environment.variables = {
-    EDITOR = "nano";
+    EDITOR = "micro";
     BROWSER = "firefox";
     QT_QPA_PLATFORM = "xcb";
     #QT_QPA_PLATFORMTHEME = lib.mkForce "qt5ct";
