@@ -20,7 +20,6 @@
     blueberry
     btop
     curl
-    dex
     dmenu
     duf
     edid-decode
@@ -48,7 +47,6 @@
     neofetch
     networkmanagerapplet
     nixos-generators
-    nomacs
     platinum-searcher
     polybar
     qt6Packages.qtstyleplugin-kvantum
